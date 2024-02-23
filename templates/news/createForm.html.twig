@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire de création d'article{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <h3 class="mt-5 mb-5">Formulaire de contact</h3>
+        <div class="col-md6 offset-md-3">
+            {{ form_start(form) }}
+                {{ form(form) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
