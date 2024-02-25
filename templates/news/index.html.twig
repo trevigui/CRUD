@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %} {# Ne pas oublier les quotes, sinon erreur "base" n'existe pas #}
+
+{% block body %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <td scope="col">Content</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in data %}
+                <tr>
+                    <th>{{ element.title }}</th>
+                    <td>{{ element.content }}</td>
+                    <td>
+                        <button>
+                            <a href="{{ path('update', {'id' : element.id } ) }}">Modifier</a> 
+                        </button>
+                    </td>
+                    <td>
+                        <button>
+                            <a href="{{ path('delete', {'id' : element.id }) }}">Supprimer</a> 
+                        </button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

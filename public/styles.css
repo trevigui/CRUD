@@ -2,3 +2,7 @@ code {
     background-color: transparent !important;
     /* le important est nécessaire pour overwrite Bootstrap */
 }
+
+* {
+    box-sizing: border-box;
+}
